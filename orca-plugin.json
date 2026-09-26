@@ -1,0 +1,25 @@
+{
+  "manifestVersion": 1,
+  "id": "work-notification-dot",
+  "publisher": "stnslvsvnv",
+  "name": "Work Notification Dot",
+  "version": "1.0.1",
+  "description": "Paints an orange dot (or a numbered badge) on Orca's Windows taskbar button while worktrees have unread agent activity — finished, waiting for input, or blocked.",
+  "engines": { "orca": ">=1.4.0" },
+  "pluginApi": 1,
+  "main": "main.mjs",
+  "contributes": {
+    "events": [
+      { "on": "agent.status.changed" },
+      { "on": "worktree.created" },
+      { "on": "worktree.removed" }
+    ],
+    "commands": [
+      { "id": "status", "title": "Work dot: status", "context": "global" },
+      { "id": "clear", "title": "Work dot: clear badge", "context": "global" },
+      { "id": "mode", "title": "Work dot: toggle dot/number", "context": "global" },
+      { "id": "repair", "title": "Work dot: restart badge host", "context": "global" }
+    ]
+  },
+  "capabilities": [{ "kind": "events:subscribe" }]
+}
