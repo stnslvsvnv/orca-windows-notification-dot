@@ -171,3 +171,7 @@ a plugin update takes.
   ```powershell
   powershell -File "$env:USERPROFILE\.orca\work-notification-dot\badge-host.ps1" -Root "$env:USERPROFILE\.orca\work-notification-dot" -Stop
   ```
+
+## License
+
+MIT — see [LICENSE](LICENSE).
